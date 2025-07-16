@@ -1,6 +1,6 @@
 ---
-name: Feature request
-about: Submit a proposal for a new feature
+name: Feature request and suggestions
+about: Submit a proposal for a new feature of suggestion.
 title: ""
 labels: midnight-template-repo, public
 assignees: ""

@@ -1,5 +1,3 @@
-# Content Proposal
-
 ---
 name: Content Proposal 
 about: Propose a piece of content

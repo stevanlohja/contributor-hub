@@ -1,10 +1,12 @@
 # Content Proposal
 
-Name:  
-Content Title:  
-Labels: 
-
-—
+---
+name: Content Proposal 
+about: Propose a piece of content
+title: ""
+labels: midnight-template-repo, public
+assignees: ""
+---
 
 ## Type of Content
 

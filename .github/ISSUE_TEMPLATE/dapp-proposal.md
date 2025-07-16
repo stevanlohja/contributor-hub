@@ -1,4 +1,10 @@
-### **🧠 Overview**
+---
+name: DApp Proposal
+about: Propose an idea for a DApp
+title: ""
+labels: midnight-template-repo, public
+assignees: ""
+---
 
 **Give your dApp a name or working title:**  
  `e.g. Private Journal DApp`

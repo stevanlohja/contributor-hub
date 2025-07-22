@@ -2,7 +2,7 @@
 name: Content Proposal 
 about: Propose a piece of content
 title: ""
-labels: midnight-template-repo, public
+labels: content-proposal, public
 assignees: ""
 ---
 

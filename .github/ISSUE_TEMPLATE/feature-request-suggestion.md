@@ -2,7 +2,7 @@
 name: Feature request and suggestions
 about: Submit a proposal for a new feature of suggestion.
 title: ""
-labels: midnight-template-repo, public
+labels: feature-request, public
 assignees: ""
 ---
 

@@ -2,7 +2,7 @@
 name: DApp Proposal
 about: Propose an idea for a DApp
 title: ""
-labels: midnight-template-repo, public
+labels: dapp-proposal, public
 assignees: ""
 ---
 

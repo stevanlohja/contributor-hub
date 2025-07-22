@@ -1,0 +1,26 @@
+name: Triage Move to Grab n Go
+on:
+  issues:
+    types: [labeled]
+jobs:
+  add-to-grab-n-go:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'triaged'
+    steps:
+      - uses: actions/add-to-project@v1
+        with:
+          project-url: https://github.com/orgs/midnightntwrk/projects/37  # Grab n Go Board
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labeled: triaged
+      - name: Remove from Community Board
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const projectId = 'PVT_kwDOC7x9W84A90_s';  # Community Board GraphQL ID
+            const contentId = context.payload.issue.node_id;
+            await github.graphql(`mutation {
+              deleteProjectV2Item(input: {projectId: "${projectId}", itemId: "${contentId}"}) {
+                deletedItemId
+              }
+            }`);
+          github-token: ${{ secrets.PAT }}  # Use a Personal Access Token with 'project:write' and 'repo' scopes

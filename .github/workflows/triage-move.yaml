@@ -2,6 +2,9 @@ name: Triage Move to Grab n Go
 on:
   issues:
     types: [labeled]
+permissions:  # Grants necessary scopes to GITHUB_TOKEN for project mutations
+  projects: write
+  issues: read
 jobs:
   add-to-grab-n-go:
     runs-on: ubuntu-latest
@@ -10,9 +13,9 @@ jobs:
       - name: Add to Grab n Go Board and Remove from Community Board
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.PAT }}  # Use a Personal Access Token with 'project:write' and 'repo' scopes
+          github-token: ${{ github.token }}  # Uses built-in GITHUB_TOKEN with granted permissions
           script: |
-            const grabNGoProjectId = 'PVT_kwDOC7x9W84A90_t';  # Replace with Grab n Go Board GraphQL ID (project 37)
+            const grabNGoProjectId = 'PVT_kwDOC7x9W84A-fjK';  # Grab n Go Board GraphQL ID (project 37)
             const communityBoardProjectId = 'PVT_kwDOC7x9W84A90_s';  # Community Board GraphQL ID (project 36)
             const contentId = context.payload.issue.node_id;
 

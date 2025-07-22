@@ -7,20 +7,39 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'triaged'
     steps:
-      - uses: actions/add-to-project@v1
-        with:
-          project-url: https://github.com/orgs/midnightntwrk/projects/37  # Grab n Go Board
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          labeled: triaged
-      - name: Remove from Community Board
+      - name: Add to Grab n Go Board and Remove from Community Board
         uses: actions/github-script@v7
         with:
-          script: |
-            const projectId = 'PVT_kwDOC7x9W84A90_s';  # Community Board GraphQL ID
-            const contentId = context.payload.issue.node_id;
-            await github.graphql(`mutation {
-              deleteProjectV2Item(input: {projectId: "${projectId}", itemId: "${contentId}"}) {
-                deletedItemId
-              }
-            }`);
           github-token: ${{ secrets.PAT }}  # Use a Personal Access Token with 'project:write' and 'repo' scopes
+          script: |
+            const grabNGoProjectId = 'PVT_kwDOC7x9W84A90_t';  # Replace with Grab n Go Board GraphQL ID (project 37)
+            const communityBoardProjectId = 'PVT_kwDOC7x9W84A90_s';  # Community Board GraphQL ID (project 36)
+            const contentId = context.payload.issue.node_id;
+
+            // Add issue to Grab n Go Board
+            const addMutation = `
+              mutation($projectId: ID!, $contentId: ID!) {
+                addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
+                  item {
+                    id
+                  }
+                }
+              }
+            `;
+            await github.graphql(addMutation, {
+              projectId: grabNGoProjectId,
+              contentId: contentId
+            });
+
+            // Remove issue from Community Board
+            const removeMutation = `
+              mutation($projectId: ID!, $contentId: ID!) {
+                deleteProjectV2Item(input: {projectId: $projectId, itemId: $contentId}) {
+                  deletedItemId
+                }
+              }
+            `;
+            await github.graphql(removeMutation, {
+              projectId: communityBoardProjectId,
+              contentId: contentId
+            });

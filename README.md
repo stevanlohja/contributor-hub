@@ -1,72 +1,61 @@
-# Midnight Template Repository
+# Community Hub Repository
 
-This GitHub repository should be used as a template when creating a new Midnight GitHub repository.
-The template is configured with default repository settings and a set of default files that are expected to exist in all Midnight GitHub repositories.
+The Community Hub serves as a collaborative platform for gathering and managing community-driven contributions. Whether you're proposing new content, requesting features, reporting issues, or ideation for dApps, this repo is your entry point. We use GitHub's built-in features like issues, projects, and automations to ensure ideas are triaged efficiently and turned into actionable tasks.
 
-### LICENSE
+Key Features:
 
-Apache 2.0.
+- Public Boards: For transparency in triage and task management.
+- Automated Workflow (coming soon): Issues are automatically added to boards and moved based on labels.
+- Inclusive Contribution: Open to all, with guidelines for high-quality submissions.
 
-### README.md
+This repo is part of the `midnightntwrk` organization.
 
-Provides a brief description for users and developers who want to understand the purpose, setup, and usage of the repository.
+## Issue Templates
 
-### SECURITY.md
+To standardize submissions and make it easier for contributors, we provide the following issue templates:Content Proposal: For suggesting new content like articles, tutorials, or resources. Use this to propose ideas that educate or engage the community.
 
-Provides a brief description of the Midnight Foundation's security policy and how to properly disclose security issues.
+- Feature Request/Suggestion: For proposing new features, enhancements, or suggestions to improve existing tools or processes.
+- 
+- Bug: For reporting defects, errors, or unexpected behavior. Include reproduction steps, environment details, and screenshots if possible.
+- 
+- dApp Proposal: For ideas related to decentralized applications, including concepts, integrations, or improvements for dApps in our ecosystem.
 
-### CONTRIBUTING.md
+When creating an issue, select the appropriate template from the "New Issue" page. This auto-applies relevant labels (e.g., `bug`, `feature-request-suggestion`) for better categorization.
 
-Provides guidelines for how people can contribute to the Midnight project.
+## Workflow
 
-### CODEOWNERS
+Our workflow ensures every submission is reviewed fairly and efficiently. Issues start in the Community Board for triage and, if approved, move to the Grab n Go Board for contributors to pick up. Both boards are public for transparency.
 
-Defines repository ownership rules.
+Columns (based on the "Status" field):
 
-### ISSUE_TEMPLATE
+- New: Entry point for fresh issues. Community members can view and comment.
+- In Triage: Active review by the triage committee (validity, priority, labels).
+- Needs Discussion: For issues requiring broader feedback or clarification.
+- Rejected: Invalid or out-of-scope issues, with explanations for transparency.
 
-Provides templates for reporting various types of issues, such as: bug report, documentation improvement and feature request.
+The triage committee meets periodically to review and move issues. If legitimate, they add a `triaged` label, triggering an automation to move it to the Grab n Go Board.
 
-### PULL_REQUEST_TEMPLATE
+## Grab n Go Board
 
-Provides a template for a pull request.
+The Grab n Go Board showcases approved, ready-to-work-on tasks. It's a backlog for contributors.Columns (based on the "Status" field):
+- Ready: Triaged issues awaiting pickup (e.g., labeled good-first-issue for beginners).
+- In Progress: Tasks being worked on (assign yourself and update via PRs).
+- Done: Completed issues (auto-moves on close).
 
-### CLA Assistant
+Automations handle movement between boards and status updates for efficiency.
 
-The Midnight Foundation appreciates contributions, and like many other open source projects asks contributors to sign a contributor
-License Agreement before accepting contributions. We use CLA assistant (https://github.com/cla-assistant/cla-assistant) to streamline the CLA
-signing process, enabling contributors to sign our CLAs directly within a GitHub pull request.
+## Code of Conduct
 
-### Dependabot
+We are committed to a positive, inclusive community. Please adhere to our CODE_OF_CONDUCT.md.
 
-The Midnight Foundation uses GitHub Dependabot feature to keep our projects dependencies up-to-date and address potential security vulnerabilities. 
+## Contributing
 
-### Checkmarx
+We welcome contributions from everyone! Follow these steps:
 
-The Midnight Foundation uses Checkmarx for application security (AppSec) to identify and fix security vulnerabilities.
-All repositories are scanned with Checkmarx's suite of tools including: Static Application Security Testing (SAST), Infrastructure as Code (IaC), Software Composition Analysis (SCA), API Security, Container Security and Supply Chain Scans (SCS).
+- Fork the Repo: Click "Fork" on the top right.
+- Create an Issue: Use templates to submit ideas or bugs.
+- Work on Tasks: Browse the Grab n Go Board, assign yourself to a "Ready" issue.
+- Submit a Pull Request: Want to improve Community-hub? Submit a PR and follow our CONTRIBUTING.md for details on code style, testing, and commits.
+- Labels and Priorities: Use labels like priority:high, help-wanted, or good-first-issue to guide contributions.
 
-### Unito
-
-Facilitates two-way data synchronization, automated workflows and streamline processes between: Jira, GitHub issues and Github project Kanban board. 
-
-# TODO - New Repo Owner
-
-### Software Package Data Exchange (SPDX)
-Include the following Software Package Data Exchange (SPDX) short-form identifier in a comment at the top headers of each source code file.
-
-
- <I>// This file is part of <B>REPLACE WITH REPO-NAME</B>.<BR>
- // Copyright (C) 2025 Midnight Foundation<BR>
- // SPDX-License-Identifier: Apache-2.0<BR>
- // Licensed under the Apache License, Version 2.0 (the "License");<BR>
- // You may not use this file except in compliance with the License.<BR>
- // You may obtain a copy of the License at<BR>
- //<BR>
- //	http://www.apache.org/licenses/LICENSE-2.0<BR>
- //<BR>
- // Unless required by applicable law or agreed to in writing, software<BR>
- // distributed under the License is distributed on an "AS IS" BASIS,<BR>
- // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<BR>
- // See the License for the specific language governing permissions and<BR>
- // limitations under the License.</I>
+For non-code contributions (e.g., docs, proposals), submit via issues. All PRs require review by at least one maintainer.

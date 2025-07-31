@@ -20,7 +20,7 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.APP_PEM }}
       - name: Add to Grab n Go Board
-        uses: actions/add-to-project@v1
+        uses: actions/add-to-project@v1.0.2
         with:
           project-url: https://github.com/orgs/midnightntwrk/projects/37
           github-token: ${{ steps.generate-token.outputs.token }}
@@ -36,7 +36,7 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.APP_PEM }}
       - name: Remove from Community Board
-        uses: monry/actions-delete-issue-from-project@v2
+        uses: monry/actions-delete-issue-from-project@v2.0.1
         with:
           github-token: ${{ steps.generate-token.outputs.token }}
           project-owner: midnightntwrk

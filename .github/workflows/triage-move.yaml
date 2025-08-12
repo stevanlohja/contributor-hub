@@ -8,23 +8,19 @@ jobs:
   move-issue:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'triaged'
-    
-    # Permissions are now defined at the job level
-    permissions:
-      issues: write
-      repository-projects: write
-      
     steps:
       - name: Add to Grab n Go Board
         uses: actions/add-to-project@v1.0.2
         with:
           project-url: https://github.com/orgs/midnightntwrk/projects/37
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Use the PAT stored in secrets
+          github-token: ${{ secrets.STEV }}
 
       - name: Remove from Community Board
         uses: monry/actions-delete-issue-from-project@v2.0.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Use the PAT stored in secrets
+          github-token: ${{ secrets.STEV }}
           project-owner: midnightntwrk
           project-number: 36
           issue-repository: ${{ github.repository }}

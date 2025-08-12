@@ -4,15 +4,16 @@ on:
   issues:
     types: [labeled]
 
-# Grant permissions to the GITHUB_TOKEN for this workflow run
-permissions:
-  issues: write
-  projects: write
-
 jobs:
   move-issue:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'triaged'
+    
+    # Permissions are now defined at the job level
+    permissions:
+      issues: write
+      projects: write
+      
     steps:
       - name: Add to Grab n Go Board
         uses: actions/add-to-project@v1.0.2

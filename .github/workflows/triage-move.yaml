@@ -1,44 +1,29 @@
-name: Move Triaged Issues to Grab n Go
+name: Move Triaged Issues
 
 on:
   issues:
     types: [labeled]
 
+# Grant permissions to the GITHUB_TOKEN for this workflow run
 permissions:
-  issues: read
-  contents: read  # Required for some actions
+  issues: write
+  projects: write
 
 jobs:
-  add-to-grab-n-go:
+  move-issue:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'triaged'
     steps:
-      - name: Generate app token
-        id: generate-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.APP_PEM }}
       - name: Add to Grab n Go Board
         uses: actions/add-to-project@v1.0.2
         with:
           project-url: https://github.com/orgs/midnightntwrk/projects/37
-          github-token: ${{ steps.generate-token.outputs.token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  remove-from-community:
-    runs-on: ubuntu-latest
-    if: github.event.label.name == 'triaged'
-    steps:
-      - name: Generate app token
-        id: generate-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.APP_PEM }}
       - name: Remove from Community Board
         uses: monry/actions-delete-issue-from-project@v2.0.1
         with:
-          github-token: ${{ steps.generate-token.outputs.token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           project-owner: midnightntwrk
           project-number: 36
           issue-repository: ${{ github.repository }}

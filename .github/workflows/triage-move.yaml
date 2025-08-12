@@ -12,7 +12,7 @@ jobs:
     # Permissions are now defined at the job level
     permissions:
       issues: write
-      projects: write
+      project: write
       
     steps:
       - name: Add to Grab n Go Board

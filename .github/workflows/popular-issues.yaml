@@ -8,8 +8,10 @@ env:
   # --- CONFIGURATION ---
   # The label to add to popular issues. Make sure this label exists in your repository.
   LABEL_NAME: 'HOT'
-  # The number of "thumbs up" reactions required to be considered popular.
-  VOTE_THRESHOLD: 1
+  # The number of "thumbs up" reactions required.
+  # The script will label issues with a vote count GREATER THAN this number.
+  # Setting it to 0 means any issue with 1 or more votes gets the label.
+  VOTE_THRESHOLD: 0
   # --- END CONFIGURATION ---
 
 jobs:

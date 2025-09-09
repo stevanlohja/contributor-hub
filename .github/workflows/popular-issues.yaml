@@ -1,0 +1,60 @@
+name: Highlight Popular Issues
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour; change to '0 0 * * *' for daily
+
+jobs:
+  check-reactions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Check Reactions and Add Label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.COMMUNITY_BOARD }}
+          script: |
+            const threshold = 1;  // Adjust this number as needed
+            const labelName = 'HOT';  // Label to add (create this label in your repo first)
+
+            // List all open issues in the repo
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+
+            for (const issue of issues) {
+              // Get reactions for the issue (only count 👍)
+              const reactions = await github.rest.reactions.listForIssue({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                content: '+1'  // Filter for thumbs up; add others like 'rocket' if needed
+              });
+
+              const voteCount = reactions.data.length;
+
+              if (voteCount > threshold) {
+                // Check if label already exists
+                const labels = await github.rest.issues.listLabelsOnIssue({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number
+                });
+
+                if (!labels.data.some(label => label.name === labelName)) {
+                  // Add the label
+                  await github.rest.issues.addLabels({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue.number,
+                    labels: [labelName]
+                  });
+                  console.log(`Added '${labelName}' label to issue #${issue.number} with ${voteCount} votes.`);
+                }
+              }
+            }

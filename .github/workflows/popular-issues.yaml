@@ -7,9 +7,9 @@ on:
 env:
   # --- CONFIGURATION ---
   # The label to add to popular issues. Make sure this label exists in your repository.
-  LABEL_NAME: 'HOT'
+  LABEL_NAME: '🔥 HOT'
   # The number of "thumbs up" reactions required to be considered popular.
-  VOTE_THRESHOLD: 5
+  VOTE_THRESHOLD: 1
   # --- END CONFIGURATION ---
 
 jobs:

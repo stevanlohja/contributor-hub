@@ -15,9 +15,7 @@ This repo is part of the `midnightntwrk` organization.
 To standardize submissions and make it easier for contributors, we provide the following issue templates:Content Proposal: For suggesting new content like articles, tutorials, or resources. Use this to propose ideas that educate or engage the community.
 
 - Feature Request/Suggestion: For proposing new features, enhancements, or suggestions to improve existing tools or processes.
-- 
 - Bug: For reporting defects, errors, or unexpected behavior. Include reproduction steps, environment details, and screenshots if possible.
-- 
 - dApp Proposal: For ideas related to decentralized applications, including concepts, integrations, or improvements for dApps in our ecosystem.
 
 When creating an issue, select the appropriate template from the "New Issue" page. This auto-applies relevant labels (e.g., `bug`, `feature-request-suggestion`) for better categorization.

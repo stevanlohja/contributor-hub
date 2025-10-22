@@ -1,40 +1,49 @@
-Hacktoberfest is a global open-source event held every October, where developers contribute pull requests to public repositories to earn digital rewards.
+**Hacktoberfest** is a global open-source event held every October, where developers contribute pull requests to public repositories to earn digital rewards.
+
 Midnight is joining the celebration by inviting contributors to improve its open-source ecosystem — from smart contracts and DApps to core libraries and documentation.
 
 Review the guide to get started.
 
-1. Registration
+## 1. Registration
+
 To participate, register at https://hacktoberfest.com/auth/.
 
-All opportunities to contribute to Midnight’s open source ecosystem will be available through our Community Hub.
+All opportunities to contribute to Midnight’s open source ecosystem will be available through our [Community Hub](https://github.com/midnightntwrk/community-hub).
 
-Participants are encouraged to submit six (6) high-quality pull or merge requests between October 1 and October 31 to earn the official Hacktoberfest digital badge.
-Review our Contribution Guidelines before submitting any work.
+Participants are encouraged to submit six (6) high-quality pull or merge requests between *October 1 and October 31* to earn the official Hacktoberfest digital badge.
+Review our [Contribution Guidelines](https://github.com/midnightntwrk/community-hub/blob/main/CONTRIBUTING.md) before submitting any work.
 
-2. Hacktoberfest Participation
-Look for issues labeled hacktoberfest to find eligible contribution opportunities.
+## 2. Hacktoberfest Participation
 
-Docs: Submit pull requests to the Midnight Docs repository.
-Core Libraries: Submit issues or PRs to MidnightJs.
-No-code / Low-code: Create an issue in the Community Hub using one of the following templates, assign it to yourself, and post a link to your work in the issue comments:
-dapp-proposal
-content-proposal
-documentation improvement
-Once reviewed and approved, qualifying issues will be labeled hacktoberfest-accepted.
+Look for issues labeled hacktoberfest or browse through issues submitted by other community members to find contribution opportunities.
 
-To earn additional Midnight-specific rewards, visit our Zealy quests and complete the tasks under the Hacktoberfest Sprint.
+Docs: Submit pull requests to the [Midnight Docs repository](https://github.com/midnightntwrk/midnight-docs).
+Core Libraries: Submit pull requests to [MidnightJs](https://github.com/midnightntwrk/midnight-js).
+No-code / Low-code: Create pull requests in the [Community Hub](https://github.com/midnightntwrk/community-hub) using the submission template.
 
-3. Rewards
-🎖️ Holopin Badge
+Once reviewed and approved, qualifying issues will be labeled `hacktoberfest-accepted`.
+
+Have an idea others can contribute to? Create an issue in the Community Hub using the following templates:
+- dapp-proposal
+- content-proposal
+- documentation improvement
+
+To earn additional Midnight-specific rewards, visit our [Zealy quests](https://zealy.io/cw/midnightnetwork/questboard/) and complete the tasks under the [Hacktoberfest Sprint](https://zealy.io/cw/midnightnetwork/questboard/ffd38a52-cc39-42b4-9880-5b64c18face3/3a29aec7-690c-45a0-a17d-93ea78e65011).
+
+## 3. Rewards
+
+### 🎖️ Holopin Badge
 Receive the official Hacktoberfest digital badge for contributing to open source.
 
-👕 Swag
+### 👕 Swag
 The first 10,000 participants who successfully complete six (6) accepted PRs/MRs will receive the official Hacktoberfest T-shirt. (Terms & Conditions apply.)
 
-🌳 Treenation Reward
+Top 3 on the [Zealy Hacktoberfest leaderboard](https://zealy.io/cw/midnightnetwork/leaderboard/bdd692a0-9543-4e56-8820-6c09f4e2a771) win a Midnight T-shirt.
+
+### 🌳 Treenation Reward
 Every sixth PR/MR qualifying for a T-shirt will also trigger a Treenation tree-planting contribution, helping make the world a greener place.
 
-4. Acceptable Contribution Types
+## 4. Acceptable Contribution Types
 Contributions may include, but are not limited to:
 
 Code updates to MidnightJs

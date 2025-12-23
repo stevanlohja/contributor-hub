@@ -1,7 +1,7 @@
 name: Content Proposal
 description: Propose new articles, tutorials, or educational content for Midnight.
 title: "[Proposal]: "
-labels: ["content", "proposal"]
+labels: ["content"]
 body:
   - type: input
     id: title

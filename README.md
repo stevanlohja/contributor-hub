@@ -1,45 +1,36 @@
-<div align="center">
-
 # 👥 Contributor Hub
 
-</div>
+The **Contributor Hub** is the central collaborative platform for gathering and managing community-driven contributions within the `midnightntwrk` organization. It serves as the primary entry point for proposing new content, requesting features, reporting issues, or ideating for dApps on the Midnight Network.
 
-<br />
+## 🛠 How to Contribute
 
-The **Community Hub** serves as a collaborative platform for gathering and managing community-driven contributions. Whether you're proposing new content, requesting features, reporting issues, or ideation for dApps, this repo is your entry point. We use GitHub's built-in features like issues, projects, and automations to ensure ideas are triaged efficiently and turned into actionable tasks.
+We welcome contributions of all types, including code, documentation, and technical content.
 
-This repo is part of the `midnightntwrk` organization.
+### Submitting Issues
+Use our GitHub Issue Forms to submit:
+* **Bug Reports:** Provide detailed information including steps to reproduce and expected behavior. Note: if a bug pertains to a specific repo (like `midnight-js`), report it there directly.
+* **Feature Requests:** Clearly describe the proposed feature, its benefits, and the expected outcome.
+* **Content Proposals:** Propose new tutorials, blog posts, or documentation improvements.
 
-## Create an Issue
+### Pull Request Process
+1.  **Fork the Repo:** Create your own fork of the repository.
+2.  **Create a Branch:** Use a descriptive name prefixed with a short moniker (e.g., `jill-my-feature`).
+3.  **Follow Standards:** Adhere to the coding style guides and ensure new functionality includes unit and integration tests.
+4.  **License Header:** Ensure all new files include the Apache-2.0 license header.
+5.  **Submit:** Open a PR to the main repository. Avoid `--force` pushes to assist the review process.
 
-## Code of Conduct
+## 📅 Events & Showcases
 
-We are committed to a positive, inclusive community. Please adhere to our CODE_OF_CONDUCT.md.
+If you are participating in a Midnight event (such as **Hacktoberfest** or the **Midnight Summit**), you can showcase your work here:
+1.  Navigate to the `/events` folder.
+2.  Create a Markdown file in the specific event sub-folder (e.g., `events/hacktoberfest-2025/your-handle.md`).
+3.  Fill out the submission template found in the `events/README.md`.
 
-## Contributing
+## ⚖️ Governance & Security
 
-We welcome contributions from everyone! Follow these steps:
+* **Code of Conduct:** We are committed to a positive, inclusive, and harassment-free environment. Please review our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+* **Security Policy:** Report security vulnerabilities privately via GitHub's private reporting or by emailing `security@midnight.foundation`.
+* **License:** This project is licensed under the **Apache License, Version 2.0**.
 
-- Fork the Repo: Click "Fork" on the top right.
-- Create an Issue: Use templates to submit ideas or bugs.
-- Work on Tasks: Browse the Grab n Go Board, assign yourself to a "Ready" issue.
-- Submit a Pull Request: Want to improve Community-hub? Submit a PR and follow our CONTRIBUTING.md for details on code style, testing, and commits.
-- Labels and Priorities: Use labels like priority:high, help-wanted, or good-first-issue to guide contributions.
-
-For non-code contributions (e.g., docs, proposals), submit via issues. All PRs require review by at least one maintainer.
-
-## Adding Your Project to an Event
-
-  If you’re participating in a Midnight event such as a hackathon, summit, or Hacktoberfest, you can showcase your work and contributions directly in this repository.
-
-  **Steps:**
-
-  1. Navigate to the `/events` folder.  
-  2. Open the folder for your event (e.g. `events/hacktoberfest-2025/`).  
-  3. Inside, create a new Markdown file named after your handle or team: events/<event-slug>/<your-handle-or-team-slug>.md
-  4. Copy and fill out the [submission template](./events/README.md). It works for projects, tutorials, threads, or any other type of contribution.  
-  5. Commit and open a Pull Request.
-
-  Once your PR is merged, your submission will appear in the event’s showcase page automatically.
-
-> **Tip:** Keep filenames lowercase and hyphenated, and make sure your front-matter fields match the example format.  
+## 💬 Connect With Us
+Stay updated and engage with the community on [Discord](https://discord.com/invite/midnightnetwork), [Telegram](https://t.me/Midnight_Network_Official), or [X](https://x.com/MidnightNtwrk).
